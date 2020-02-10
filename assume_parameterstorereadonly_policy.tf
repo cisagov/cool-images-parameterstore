@@ -19,11 +19,3 @@ resource "aws_iam_policy" "assume_parameterstorereadonly" {
   name        = var.assume_parameterstorereadonly_policy_name
   policy      = data.aws_iam_policy_document.assume_parameterstorereadonly_doc.json
 }
-
-# Attach the policy to the group that should have access
-resource "aws_iam_group_policy_attachment" "assume_parameterstorereadonly" {
-  provider = aws.users
-
-  group      = aws_iam_group.parameterstorereadonly.name
-  policy_arn = aws_iam_policy.assume_parameterstorereadonly.arn
-}
