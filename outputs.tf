@@ -1,4 +1,4 @@
-output "ssmfullaccess_group_arn" {
+output "parameterstorefullaccess_group_arn" {
   value       = aws_iam_group.parameterstorefullaccess.arn
   description = "The ARN of the IAM group that is allowed full access to SSM ParameterStore in the Terraform account."
 }
