@@ -23,32 +23,32 @@ variable "users_account_id" {
 # These parameters have reasonable defaults.
 # ------------------------------------------------------------------------------
 
-variable "assume_access_parameterstorefullaccess_policy_description" {
+variable "assume_parameterstorefullaccess_policy_description" {
   description = "The description to associate with the IAM policy that allows full access to SSM ParameterStore in the Images account."
   default     = "Allow assumption of the ParameterStoreFullAccess role in the Images account."
 }
 
-variable "assume_access_parameterstorefullaccess_policy_name" {
+variable "assume_parameterstorefullaccess_policy_name" {
   description = "The name to associate with the IAM policy that allows full access to SSM ParameterStore in the Images account."
   default     = "Images-AssumeParameterStoreFullAccess"
 }
 
-variable "assume_access_parameterstorereadonly_policy_description" {
+variable "assume_parameterstorereadonly_policy_description" {
   description = "The description to associate with the IAM policy that allows read-only access to SSM ParameterStore in the Images account."
   default     = "Allow assumption of the ParameterStoreReadOnly role in the Images account."
 }
 
-variable "assume_access_parameterstorereadonly_policy_name" {
+variable "assume_parameterstorereadonly_policy_name" {
   description = "The name to associate with the IAM policy that allows read-only access to SSM ParameterStore in the Images account."
   default     = "Images-AssumeParameterStoreReadOnly"
 }
 
-variable "assume_access_provisionparameterstorereadroles_policy_description" {
+variable "assume_provisionparameterstorereadroles_policy_description" {
   description = "The description to associate with the IAM policy that gives the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
   default     = "Allow assumption of the ProvisionParameterStoreReadRoles role in the Images account."
 }
 
-variable "assume_access_provisionparameterstorereadroles_policy_name" {
+variable "assume_provisionparameterstorereadroles_policy_name" {
   description = "The name to associate with the IAM policy that gives the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
   default     = "Images-AssumeProvisionParameterStoreReadRoles"
 }
