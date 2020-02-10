@@ -43,6 +43,16 @@ variable "assume_access_parameterstorereadonly_policy_name" {
   default     = "Images-AssumeParameterStoreReadOnly"
 }
 
+variable "assume_access_provisionparameterstorereadroles_policy_description" {
+  description = "The description to associate with the IAM policy that gives the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
+  default     = "Allow assumption of the ProvisionParameterStoreReadRoles role in the Images account."
+}
+
+variable "assume_access_provisionparameterstorereadroles_policy_name" {
+  description = "The name to associate with the IAM policy that gives the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
+  default     = "Images-AssumeProvisionParameterStoreReadRoles"
+}
+
 variable "aws_region" {
   description = "The AWS region where the non-global resources are to be provisioned (e.g. \"us-east-1\")."
   default     = "us-east-1"
@@ -86,6 +96,21 @@ variable "parameterstorereadonly_role_name" {
 variable "provisionaccount_role_name" {
   description = "The name of the IAM role that allows sufficient permissions to provision all IAM AWS resources in an account."
   default     = "ProvisionAccount"
+}
+
+variable "provisionparameterstorereadroles_group_name" {
+  description = "The name to associate with the IAM group that is given the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
+  default     = "images_provisionparameterstorereadroles"
+}
+
+variable "provisionparameterstorereadroles_role_description" {
+  description = "The description to associate with the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
+  default     = "Allows creation of IAM roles that can read selected ParameterStore parameters in the Images account."
+}
+
+variable "provisionparameterstorereadroles_role_name" {
+  description = "The name to assign the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
+  default     = "ProvisionParameterStoreReadRoles"
 }
 
 variable "tags" {
