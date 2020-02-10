@@ -33,6 +33,16 @@ variable "assume_access_parameterstorefullaccess_policy_name" {
   default     = "Terraform-AssumeParameterStoreFullAccess"
 }
 
+variable "assume_access_parameterstorereadonly_policy_description" {
+  description = "The description to associate with the IAM policy that allows read-only access to SSM ParameterStore in the Terraform account."
+  default     = "Allow assumption of the ParameterStoreReadOnly role in the Terraform account."
+}
+
+variable "assume_access_parameterstorereadonly_policy_name" {
+  description = "The name to associate with the IAM policy that allows read-only access to SSM ParameterStore in the Terraform account."
+  default     = "Terraform-AssumeParameterStoreReadOnly"
+}
+
 variable "aws_region" {
   description = "The AWS region where the non-global resources are to be provisioned (e.g. \"us-east-1\")."
   default     = "us-east-1"
@@ -56,6 +66,21 @@ variable "parameterstorefullaccess_role_description" {
 variable "parameterstorefullaccess_role_name" {
   description = "The name to assign the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore in the Terraform account."
   default     = "Terraform-ParameterStoreFullAccess"
+}
+
+variable "parameterstorereadonly_group_name" {
+  description = "The name to associate with the IAM group allowed read-only access to SSM ParameterStore in the Terraform account."
+  default     = "terraform_parameterstorereadonly"
+}
+
+variable "parameterstorereadonly_role_description" {
+  description = "The description to associate with the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore in the Terraform account."
+  default     = "Allows read-only access to SSM ParameterStore in the Terraform account."
+}
+
+variable "parameterstorereadonly_role_name" {
+  description = "The name to assign the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore in the Terraform account."
+  default     = "Terraform-ParameterStoreReadOnly"
 }
 
 variable "provisionaccount_role_name" {
