@@ -19,7 +19,7 @@ access in the COOL Images account.
 | aws_region | The AWS region where the non-global resources are to be provisioned (e.g. "us-east-1"). | string | `us-east-1` | no |
 | images_account_id | The ID of the images account. | string | | yes |
 | parameterstorefullaccess_group_membership_name | The name to associate with the membership of the IAM group allowed full access to SSM ParameterStore in the Images account. | string | `images_parameterstorefullaccess_membership` | no |
-| parameterstorefullaccess_group_name | The name to associate with the IAM group allowed full access to SSM ParameterStore in the Images account. | `images_parameterstorefullaccess` | no |
+| parameterstorefullaccess_group_name | The name to associate with the IAM group allowed full access to SSM ParameterStore in the Images account. | string | `images_parameterstorefullaccess` | no |
 | parameterstorefullaccess_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | string | `Allows full access to SSM ParameterStore.` | no |
 | parameterstorefullaccess_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | string | `ParameterStoreFullAccess` | no |
 | parameterstorereadonly_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore. | string | `Allows full access to SSM ParameterStore.` | no |
