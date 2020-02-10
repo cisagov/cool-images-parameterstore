@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # Create the IAM role that allows read-only access to SSM
-# ParameterStore in the Terraform account.
+# ParameterStore in the Images account.
 # ------------------------------------------------------------------------------
 
 resource "aws_iam_role" "parameterstorereadonly_role" {

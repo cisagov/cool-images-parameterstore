@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # Create the IAM policy that allows read-only access to SSM
-# ParameterStore in the terraform account.
+# ParameterStore in the images account.
 # ------------------------------------------------------------------------------
 
 data "aws_iam_policy_document" "parameterstorereadonly_doc" {
@@ -10,7 +10,7 @@ data "aws_iam_policy_document" "parameterstorereadonly_doc" {
       "ssm:GetParameters"
     ]
     resources = [
-      "arn:aws:ssm:*:${var.terraform_account_id}:/parameter/*",
+      "arn:aws:ssm:*:${var.images_account_id}:/parameter/*",
     ]
   }
 }

@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # Create the IAM policy that allows full access to SSM ParameterStore
-# in the terraform account.
+# in the Images account.
 # ------------------------------------------------------------------------------
 
 data "aws_iam_policy_document" "parameterstorefullaccess_doc" {
@@ -16,7 +16,7 @@ data "aws_iam_policy_document" "parameterstorefullaccess_doc" {
       "ssm:PutParameter"
     ]
     resources = [
-      "arn:aws:ssm:*:${var.terraform_account_id}:/parameter/*",
+      "arn:aws:ssm:*:${var.images_account_id}:/parameter/*",
     ]
   }
 

@@ -7,7 +7,7 @@ data "aws_iam_policy_document" "assume_access_parameterstorereadonly_doc" {
     actions = ["sts:AssumeRole"]
 
     resources = [
-      "arn:aws:iam::${var.terraform_account_id}:role/ParameterStoreReadOnly"
+      "arn:aws:iam::${var.images_account_id}:role/ParameterStoreReadOnly"
     ]
   }
 }

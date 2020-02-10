@@ -5,6 +5,6 @@ terraform {
     dynamodb_table = "terraform-state-lock"
     profile        = "cool-terraform-backend"
     region         = "us-east-1"
-    key            = "cool-terraform-parameterstore/terraform.tfstate"
+    key            = "cool-images-parameterstore/terraform.tfstate"
   }
 }

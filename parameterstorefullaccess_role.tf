@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # Create the IAM role that allows full access to SSM ParameterStore in
-# the Terraform account.
+# the Images account.
 # ------------------------------------------------------------------------------
 
 resource "aws_iam_role" "parameterstorefullaccess_role" {
