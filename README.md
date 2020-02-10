@@ -1,9 +1,9 @@
-# cool-terraform-parameterstore #
+# cool-images-parameterstore #
 
-[![GitHub Build Status](https://github.com/cisagov/cool-terraform-ssm/workflows/build/badge.svg)](https://github.com/cisagov/cool-terraform-ssm/actions)
+[![GitHub Build Status](https://github.com/cisagov/cool-images-parameterstore/workflows/build/badge.svg)](https://github.com/cisagov/cool-images-parameterstore/actions)
 
 Terraform code to create some related roles related to SSM Parameter
-Store in the COOL terraform account.
+Store in the COOL Images account.
 
 ## Inputs ##
 
