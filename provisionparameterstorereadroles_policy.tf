@@ -17,7 +17,7 @@ data "aws_iam_policy_document" "provisionparameterstorereadroles_doc" {
       "iam:UpdateRole"
     ]
     resources = [
-      "arn:aws:iam::${var.images_account_id}:role/ReadParameterStore-*"
+      "arn:aws:iam::${var.images_account_id}:role/ParameterStoreReadOnly-*"
     ]
   }
 }
