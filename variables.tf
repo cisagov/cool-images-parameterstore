@@ -78,6 +78,16 @@ variable "parameterstorefullaccess_role_name" {
   default     = "ParameterStoreFullAccess"
 }
 
+variable "parameterstorereadonly_group_membership_name" {
+  description = "The name to associate with the membership of the IAM group allowed read-only access to SSM ParameterStore in the Images account."
+  default     = "images_parameterstorereadonly_membership"
+}
+
+variable "parameterstorereadonly_group_name" {
+  description = "The name to associate with the IAM group allowed read-only access to SSM ParameterStore in the Images account."
+  default     = "images_parameterstorereadonly"
+}
+
 variable "parameterstorereadonly_role_description" {
   description = "The description to associate with the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore."
   default     = "Allows read-only access to SSM ParameterStore."
@@ -91,6 +101,16 @@ variable "parameterstorereadonly_role_name" {
 variable "provisionaccount_role_name" {
   description = "The name of the IAM role that allows sufficient permissions to provision all IAM AWS resources in an account."
   default     = "ProvisionAccount"
+}
+
+variable "provisionparameterstorereadroles_group_membership_name" {
+  description = "The name to associate with the membership of the IAM group with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
+  default     = "images_provisionparameterstorereadroles_membership"
+}
+
+variable "provisionparameterstorereadroles_group_name" {
+  description = "The name to associate with the IAM group allowed with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
+  default     = "images_provisionparameterstorereadroles"
 }
 
 variable "provisionparameterstorereadroles_role_description" {
