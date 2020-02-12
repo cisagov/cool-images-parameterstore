@@ -10,8 +10,6 @@ access in the COOL Images account.
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
 | admin_usernames | The usernames associated with the admin IAM user accounts. | list(string) | | yes |
-| assume_ec2amicreate_policy_description | The description to associate with the IAM policy that allows sufficient permissions to create AMIs via Packer in the Images account. | string | `Allow sufficient permissions to create AMIs via Packer in the Images account.` | no |
-| assume_ec2amicreate_policy_name | The name to associate with the IAM policy that allows sufficient permissions to create AMIs via Packer in the Images account. | string | `Images-AssumeEC2AMICreate` | no |
 | assume_parameterstorefullaccess_policy_description | The description to associate with the IAM policy that allows full access to SSM ParameterStore in the Images account. | string | `Allow full access to SSM ParameterStore in the Images account.` | no |
 | assume_parameterstorefullaccess_policy_name | The name to associate with the IAM policy that allows full access to SSM ParameterStore in the Images account. | string | `Images-AssumeParameterStoreFullAccess` | no |
 | assume_parameterstorereadonly_policy_description | The description to associate with the IAM policy that allows read-only access to SSM ParameterStore in the Images account. | string | `Allow read-only access to SSM ParameterStore in the Images account.` | no |
@@ -20,8 +18,6 @@ access in the COOL Images account.
 | assume_provisionparameterstorereadroles_policy_name | The name to associate with the IAM policy that gives the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | string | `Images-AssumeProvisionParameterStoreReadRoles` | no |
 | aws_region | The AWS region where the non-global resources are to be provisioned (e.g. "us-east-1"). | string | `us-east-1` | no |
 | images_account_id | The ID of the images account. | string | | yes |
-| ec2amicreate_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows sufficient permissions to create AMIs via Packer. | string | `Allows sufficient permissions to create AMIs via Packer.` | no |
-| ec2amicreate_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows sufficient permissions to create AMIs via Packer. | string | `EC2AMICreate` | no |
 | parameterstorefullaccess_group_membership_name | The name to associate with the membership of the IAM group allowed full access to SSM ParameterStore in the Images account. | string | `images_parameterstorefullaccess_membership` | no |
 | parameterstorefullaccess_group_name | The name to associate with the IAM group allowed full access to SSM ParameterStore in the Images account. | string | `images_parameterstorefullaccess` | no |
 | parameterstorefullaccess_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | string | `Allows full access to SSM ParameterStore.` | no |
