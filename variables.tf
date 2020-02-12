@@ -23,6 +23,16 @@ variable "users_account_id" {
 # These parameters have reasonable defaults.
 # ------------------------------------------------------------------------------
 
+variable "assume_ec2amicreate_policy_description" {
+  description = "The description to associate with the IAM policy that allows sufficient permissions to create AMIs via Packer in the Images account."
+  default     = "Allow sufficient permissions to create AMIs via Packer in the Images account."
+}
+
+variable "assume_ec2amicreate_policy_name" {
+  description = "The name to associate with the IAM policy that allows sufficient permissions to create AMIs via Packer in the Images account."
+  default     = "Images-AssumeEC2AMICreate"
+}
+
 variable "assume_parameterstorefullaccess_policy_description" {
   description = "The description to associate with the IAM policy that allows full access to SSM ParameterStore in the Images account."
   default     = "Allow assumption of the ParameterStoreFullAccess role in the Images account."
@@ -56,6 +66,16 @@ variable "assume_provisionparameterstorereadroles_policy_name" {
 variable "aws_region" {
   description = "The AWS region where the non-global resources are to be provisioned (e.g. \"us-east-1\")."
   default     = "us-east-1"
+}
+
+variable "ec2amicreate_role_description" {
+  description = "The description to associate with the IAM role (as well as the corresponding policy) that allows sufficient permissions to create AMIs via Packer."
+  default     = "Allows sufficient permissions to create AMIs via Packer."
+}
+
+variable "ec2amicreate_role_name" {
+  description = "The name to assign the IAM role (as well as the corresponding policy) that allows sufficient permissions to create AMIs via Packer."
+  default     = "EC2AMICreate"
 }
 
 variable "parameterstorefullaccess_group_membership_name" {
