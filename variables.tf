@@ -43,11 +43,6 @@ variable "parameterstorereadonly_role_name" {
   default     = "ParameterStoreReadOnly"
 }
 
-variable "provisionaccount_role_name" {
-  description = "The name of the IAM role that allows sufficient permissions to provision all IAM AWS resources in an account."
-  default     = "ProvisionAccount"
-}
-
 variable "provisionparameterstorereadroles_role_description" {
   description = "The description to associate with the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account."
   default     = "Allows creation of IAM roles that can read selected ParameterStore parameters in the Images account."
