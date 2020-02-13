@@ -9,26 +9,12 @@ access in the COOL Images account.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
-| admin_usernames | The usernames associated with the admin IAM user accounts. | list(string) | | yes |
-| assume_parameterstorefullaccess_policy_description | The description to associate with the IAM policy that allows full access to SSM ParameterStore in the Images account. | string | `Allow full access to SSM ParameterStore in the Images account.` | no |
-| assume_parameterstorefullaccess_policy_name | The name to associate with the IAM policy that allows full access to SSM ParameterStore in the Images account. | string | `Images-AssumeParameterStoreFullAccess` | no |
-| assume_parameterstorereadonly_policy_description | The description to associate with the IAM policy that allows read-only access to SSM ParameterStore in the Images account. | string | `Allow read-only access to SSM ParameterStore in the Images account.` | no |
-| assume_parameterstorereadonly_policy_name | The name to associate with the IAM policy that allows read-only access to SSM ParameterStore in the Images account. | string | `Images-AssumeParameterStoreReadOnly` | no |
-| assume_provisionparameterstorereadroles_policy_description | The description to associate with the IAM policy that gives the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | string | `Allow creation of IAM roles that can read selected ParameterStore parameters in the Images account.` | no |
-| assume_provisionparameterstorereadroles_policy_name | The name to associate with the IAM policy that gives the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | string | `Images-AssumeProvisionParameterStoreReadRoles` | no |
 | aws_region | The AWS region where the non-global resources are to be provisioned (e.g. "us-east-1"). | string | `us-east-1` | no |
 | images_account_id | The ID of the images account. | string | | yes |
-| parameterstorefullaccess_group_membership_name | The name to associate with the membership of the IAM group allowed full access to SSM ParameterStore in the Images account. | string | `images_parameterstorefullaccess_membership` | no |
-| parameterstorefullaccess_group_name | The name to associate with the IAM group allowed full access to SSM ParameterStore in the Images account. | string | `images_parameterstorefullaccess` | no |
 | parameterstorefullaccess_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | string | `Allows full access to SSM ParameterStore.` | no |
 | parameterstorefullaccess_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | string | `ParameterStoreFullAccess` | no |
-| parameterstorereadonly_group_membership_name | The name to associate with the membership of the IAM group allowed read-only access to SSM ParameterStore in the Images account. | string | `images_parameterstorereadonly_membership` | no |
-| parameterstorereadonly_group_name | The name to associate with the IAM group allowed read-only access to SSM ParameterStore in the Images account. | string | `images_parameterstorereadonly` | no |
 | parameterstorereadonly_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore. | string | `Allows read-only access to SSM ParameterStore.` | no |
 | parameterstorereadonly_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore. | string | `ParameterStoreReadOnly` | no |
-| provisionaccount_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows sufficient permissions to provision all AWS resources in an account. | string | `ProvisionAccount` | no |
-| provisionparameterstorereadroles_group_membership_name | The name to associate with the membership of the IAM group with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | string | `images_provisionparameterstorereadroles_membership` | no |
-| provisionparameterstorereadroles_group_name | The name to associate with the IAM group with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | string | `images_provisionparameterstorereadroles` | no |
 | provisionparameterstorereadroles_role_description | The description to associate with the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | string | `Allows creation of IAM roles that can read selected ParameterStore parameters in the Images account.` | no |
 | provisionparameterstorereadroles_role_name | The name to assign the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | string | `ProvisionParameterStoreReadRoles` | no |
 | tags | Tags to apply to all AWS resources provisioned. | map(string) | `{}` | no |
@@ -38,11 +24,8 @@ access in the COOL Images account.
 
 | Name | Description |
 |------|-------------|
-| parameterstorefullaccess_group_arn | The ARN of the IAM group that is allowed full access to SSM ParameterStore in the Images account. |
 | parameterstorefullaccess_role_arn | The ARN of the IAM role that allows full access to SSM ParameterStore in the Images account. |
-| parameterstorereadonly_group_arn | The ARN of the IAM group that is allowed read-only access to SSM ParameterStore in the Images account. |
 | parameterstorereadonly_role_arn | The ARN of the IAM role that allows read-only access to SSM ParameterStore in the Images account. |
-| provisionparameterstorereadroles_group_arn | The ARN of the IAM group that is given the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. |
 | provisionparameterstorereadroles_role_arn | The ARN of the IAM role with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. |
 
 ## Contributing ##
