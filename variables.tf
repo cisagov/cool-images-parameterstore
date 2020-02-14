@@ -4,10 +4,6 @@
 # You must provide a value for each of these parameters.
 # ------------------------------------------------------------------------------
 
-variable "images_account_id" {
-  description = "The ID of the images account."
-}
-
 variable "users_account_id" {
   description = "The ID of the users account."
 }

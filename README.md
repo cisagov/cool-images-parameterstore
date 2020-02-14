@@ -10,7 +10,6 @@ access in the COOL Images account.
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
 | aws_region | The AWS region where the non-global resources are to be provisioned (e.g. "us-east-1"). | string | `us-east-1` | no |
-| images_account_id | The ID of the images account. | string | | yes |
 | parameterstorefullaccess_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | string | `Allows full access to SSM ParameterStore.` | no |
 | parameterstorefullaccess_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | string | `ParameterStoreFullAccess` | no |
 | parameterstorereadonly_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore. | string | `Allows read-only access to SSM ParameterStore.` | no |
