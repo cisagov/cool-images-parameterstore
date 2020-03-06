@@ -28,6 +28,7 @@ data "aws_iam_policy_document" "provisionparameterstorereadroles_doc" {
   statement {
     actions = [
       "iam:CreatePolicy",
+      "iam:CreatePolicyVersion",
       "iam:DeletePolicy",
       "iam:GetPolicy",
       "iam:GetPolicyVersion",
