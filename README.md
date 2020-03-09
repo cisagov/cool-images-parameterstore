@@ -23,9 +23,9 @@ access in the COOL Images account.
 
 | Name | Description |
 |------|-------------|
-| parameterstorefullaccess_role_arn | The ARN of the IAM role that allows full access to SSM ParameterStore in the Images account. |
-| parameterstorereadonly_role_arn | The ARN of the IAM role that allows read-only access to SSM ParameterStore in the Images account. |
-| provisionparameterstorereadroles_role_arn | The ARN of the IAM role with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. |
+| parameterstorefullaccess_role | The IAM role that allows full access to SSM ParameterStore in the Images account. |
+| parameterstorereadonly_role | The IAM role that allows read-only access to SSM ParameterStore in the Images account. |
+| provisionparameterstorereadroles_role | The IAM role with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. |
 
 ## Contributing ##
 
