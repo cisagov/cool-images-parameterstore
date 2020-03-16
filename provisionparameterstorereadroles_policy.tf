@@ -31,6 +31,7 @@ data "aws_iam_policy_document" "provisionparameterstorereadroles_doc" {
       "iam:CreatePolicy",
       "iam:CreatePolicyVersion",
       "iam:DeletePolicy",
+      "iam:DeletePolicyVersion",
       "iam:GetPolicy",
       "iam:GetPolicyVersion",
       "iam:ListPolicyVersions"
