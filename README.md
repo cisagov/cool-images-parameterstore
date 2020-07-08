@@ -27,6 +27,11 @@ access in the COOL Images account.
 | parameterstorereadonly_role | The IAM role that allows read-only access to SSM ParameterStore in the Images account. |
 | provisionparameterstorereadroles_role | The IAM role with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. |
 
+## Notes ##
+
+Running `pre-commit` requires running `terraform init` in every directory that
+contains Terraform code. In this repository, this is only the main directory.
+
 ## Contributing ##
 
 We welcome contributions!  Please see [here](CONTRIBUTING.md) for
