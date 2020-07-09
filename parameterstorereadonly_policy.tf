@@ -10,7 +10,7 @@ data "aws_iam_policy_document" "parameterstorereadonly_doc" {
       "ssm:GetParameters"
     ]
     resources = [
-      "arn:aws:ssm:*:${data.aws_caller_identity.images.account_id}:parameter/*",
+      "arn:aws:ssm:*:${local.images_account_id}:parameter/*",
     ]
   }
 }
