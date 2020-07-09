@@ -44,6 +44,8 @@ data "aws_iam_policy_document" "provisionparameterstorereadroles_doc" {
 }
 
 resource "aws_iam_policy" "provisionparameterstorereadroles_policy" {
+  provider = aws.imagesprovisionaccount
+
   description = var.provisionparameterstorereadroles_role_description
   name        = var.provisionparameterstorereadroles_role_name
   policy      = data.aws_iam_policy_document.provisionparameterstorereadroles_doc.json
