@@ -17,7 +17,6 @@ access in the COOL Images account.
 | provisionparameterstorereadroles_role_description | The description to associate with the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | string | `Allows creation of IAM roles that can read selected ParameterStore parameters in the Images account.` | no |
 | provisionparameterstorereadroles_role_name | The name to assign the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | string | `ProvisionParameterStoreReadRoles` | no |
 | tags | Tags to apply to all AWS resources provisioned. | map(string) | `{}` | no |
-| users_account_id | The ID of the users account.  This account will be allowed to assume the role that allows sufficient access to provision all AWS resources in the DNS account. | string | | yes |
 
 ## Outputs ##
 
