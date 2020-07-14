@@ -23,7 +23,7 @@ data "aws_iam_policy_document" "provisionparameterstorereadroles_doc" {
       "iam:UpdateRoleDescription",
     ]
     resources = [
-      "arn:aws:iam::${data.aws_caller_identity.images.account_id}:role/ParameterStoreReadOnly-*"
+      "arn:aws:iam::${local.images_account_id}:role/ParameterStoreReadOnly-*"
     ]
   }
 
@@ -38,12 +38,14 @@ data "aws_iam_policy_document" "provisionparameterstorereadroles_doc" {
       "iam:ListPolicyVersions"
     ]
     resources = [
-      "arn:aws:iam::${data.aws_caller_identity.images.account_id}:policy/ParameterStoreReadOnly-*"
+      "arn:aws:iam::${local.images_account_id}:policy/ParameterStoreReadOnly-*"
     ]
   }
 }
 
 resource "aws_iam_policy" "provisionparameterstorereadroles_policy" {
+  provider = aws.imagesprovisionaccount
+
   description = var.provisionparameterstorereadroles_role_description
   name        = var.provisionparameterstorereadroles_role_name
   policy      = data.aws_iam_policy_document.provisionparameterstorereadroles_doc.json

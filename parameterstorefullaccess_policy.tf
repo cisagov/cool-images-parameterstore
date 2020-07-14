@@ -16,7 +16,7 @@ data "aws_iam_policy_document" "parameterstorefullaccess_doc" {
       "ssm:PutParameter"
     ]
     resources = [
-      "arn:aws:ssm:*:${data.aws_caller_identity.images.account_id}:parameter/*",
+      "arn:aws:ssm:*:${local.images_account_id}:parameter/*",
     ]
   }
 
@@ -31,6 +31,8 @@ data "aws_iam_policy_document" "parameterstorefullaccess_doc" {
 }
 
 resource "aws_iam_policy" "parameterstorefullaccess_policy" {
+  provider = aws.imagesprovisionaccount
+
   description = var.parameterstorefullaccess_role_description
   name        = var.parameterstorefullaccess_role_name
   policy      = data.aws_iam_policy_document.parameterstorefullaccess_doc.json

@@ -10,12 +10,14 @@ data "aws_iam_policy_document" "parameterstorereadonly_doc" {
       "ssm:GetParameters"
     ]
     resources = [
-      "arn:aws:ssm:*:${data.aws_caller_identity.images.account_id}:parameter/*",
+      "arn:aws:ssm:*:${local.images_account_id}:parameter/*",
     ]
   }
 }
 
 resource "aws_iam_policy" "parameterstorereadonly_policy" {
+  provider = aws.imagesprovisionaccount
+
   description = var.parameterstorereadonly_role_description
   name        = var.parameterstorereadonly_role_name
   policy      = data.aws_iam_policy_document.parameterstorereadonly_doc.json
