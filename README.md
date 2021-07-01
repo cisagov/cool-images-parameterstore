@@ -20,37 +20,64 @@ access in the COOL Images account.
 | Name | Version |
 |------|---------|
 | terraform | ~> 0.12.0 |
-| aws | ~> 3.0 |
+| aws | ~> 3.38 |
 
 ## Providers ##
 
 | Name | Version |
 |------|---------|
-| aws | ~> 3.0 |
-| aws.imagesprovisionaccount | ~> 3.0 |
-| aws.organizationsreadonly | ~> 3.0 |
+| aws | ~> 3.38 |
+| aws.imagesprovisionaccount | ~> 3.38 |
+| aws.organizationsreadonly | ~> 3.38 |
 | terraform | n/a |
+
+## Modules ##
+
+No modules.
+
+## Resources ##
+
+| Name | Type |
+|------|------|
+| [aws_iam_policy.parameterstorefullaccess_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_iam_policy.parameterstorereadonly_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_iam_policy.provisionparameterstorereadroles_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_iam_role.parameterstorefullaccess_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role.parameterstorereadonly_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role.provisionparameterstorereadroles_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.parameterstorefullaccess_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_iam_role_policy_attachment.parameterstorereadonly_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_iam_role_policy_attachment.provisionparameterstorereadroles_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| [aws_caller_identity.images](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| [aws_iam_policy_document.assume_role_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.parameterstorefullaccess_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.parameterstorereadonly_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.provisionparameterstorereadroles_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_organizations_organization.cool](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/organizations_organization) | data source |
+| [terraform_remote_state.images](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.master](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs ##
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| aws_region | The AWS region where the non-global resources are to be provisioned (e.g. "us-east-1"). | `string` | `us-east-1` | no |
-| parameterstorefullaccess_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | `string` | `Allows full access to SSM ParameterStore.` | no |
-| parameterstorefullaccess_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | `string` | `ParameterStoreFullAccess` | no |
-| parameterstorereadonly_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore. | `string` | `Allows read-only access to SSM ParameterStore.` | no |
-| parameterstorereadonly_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore. | `string` | `ParameterStoreReadOnly` | no |
-| provisionparameterstorereadroles_role_description | The description to associate with the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | `string` | `Allows creation of IAM roles that can read selected ParameterStore parameters in the Images account.` | no |
-| provisionparameterstorereadroles_role_name | The name to assign the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | `string` | `ProvisionParameterStoreReadRoles` | no |
-| tags | Tags to apply to all AWS resources provisioned. | `map(string)` | `{}` | no |
+| aws\_region | The AWS region where the non-global resources are to be provisioned (e.g. "us-east-1"). | `string` | `"us-east-1"` | no |
+| parameterstorefullaccess\_role\_description | The description to associate with the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | `string` | `"Allows full access to SSM ParameterStore."` | no |
+| parameterstorefullaccess\_role\_name | The name to assign the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | `string` | `"ParameterStoreFullAccess"` | no |
+| parameterstorereadonly\_role\_description | The description to associate with the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore. | `string` | `"Allows read-only access to SSM ParameterStore."` | no |
+| parameterstorereadonly\_role\_name | The name to assign the IAM role (as well as the corresponding policy) that allows read-only access to SSM ParameterStore. | `string` | `"ParameterStoreReadOnly"` | no |
+| provisionparameterstorereadroles\_role\_description | The description to associate with the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | `string` | `"Allows creation of IAM roles that can read selected ParameterStore parameters in the Images account."` | no |
+| provisionparameterstorereadroles\_role\_name | The name to assign the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | `string` | `"ProvisionParameterStoreReadRoles"` | no |
+| tags | Tags to apply to all AWS resources created. | `map(string)` | `{}` | no |
 
 ## Outputs ##
 
 | Name | Description |
 |------|-------------|
-| parameterstorefullaccess_role | The IAM role that allows full access to SSM ParameterStore in the Images account. |
-| parameterstorereadonly_role | The IAM role that allows read-only access to SSM ParameterStore in the Images account. |
-| provisionparameterstorereadroles_role | The IAM role with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. |
+| parameterstorefullaccess\_role | The IAM role that allows full access to SSM ParameterStore in the Images account. |
+| parameterstorereadonly\_role | The IAM role that allows read-only access to SSM ParameterStore in the Images account. |
+| provisionparameterstorereadroles\_role | The IAM role with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. |
 
 ## Notes ##
 

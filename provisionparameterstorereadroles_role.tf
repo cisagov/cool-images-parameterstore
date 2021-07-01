@@ -9,7 +9,6 @@ resource "aws_iam_role" "provisionparameterstorereadroles_role" {
   assume_role_policy = data.aws_iam_policy_document.assume_role_doc.json
   description        = var.provisionparameterstorereadroles_role_description
   name               = var.provisionparameterstorereadroles_role_name
-  tags               = var.tags
 }
 
 resource "aws_iam_role_policy_attachment" "provisionparameterstorereadroles_policy_attachment" {
