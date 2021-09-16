@@ -19,7 +19,7 @@ access in the COOL Images account.
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.13.0 |
+| terraform | ~> 0.14.0 |
 | aws | ~> 3.38 |
 
 ## Providers ##
