@@ -15,20 +15,21 @@ access in the COOL Images account.
 - Access to all of the Terraform remote states specified in
   [remote_states.tf](remote_states.tf).
 
+<!-- BEGIN_TF_DOCS -->
 ## Requirements ##
 
 | Name | Version |
 |------|---------|
 | terraform | ~> 1.0 |
-| aws | ~> 3.38 |
+| aws | ~> 4.9 |
 
 ## Providers ##
 
 | Name | Version |
 |------|---------|
-| aws | ~> 3.38 |
-| aws.imagesprovisionaccount | ~> 3.38 |
-| aws.organizationsreadonly | ~> 3.38 |
+| aws | ~> 4.9 |
+| aws.imagesprovisionaccount | ~> 4.9 |
+| aws.organizationsreadonly | ~> 4.9 |
 | terraform | n/a |
 
 ## Modules ##
@@ -78,6 +79,7 @@ No modules.
 | parameterstorefullaccess\_role | The IAM role that allows full access to SSM ParameterStore in the Images account. |
 | parameterstorereadonly\_role | The IAM role that allows read-only access to SSM ParameterStore in the Images account. |
 | provisionparameterstorereadroles\_role | The IAM role with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. |
+<!-- END_TF_DOCS -->
 
 ## Notes ##
 
