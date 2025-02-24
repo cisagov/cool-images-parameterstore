@@ -71,6 +71,7 @@ No modules.
 | provisionparameterstorereadroles\_role\_description | The description to associate with the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | `string` | `"Allows creation of IAM roles that can read selected ParameterStore parameters in the Images account."` | no |
 | provisionparameterstorereadroles\_role\_name | The name to assign the IAM role (as well as the corresponding policy) with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. | `string` | `"ProvisionParameterStoreReadRoles"` | no |
 | tags | Tags to apply to all AWS resources created. | `map(string)` | `{}` | no |
+| terraform\_state\_bucket | The name of the S3 bucket where Terraform state is stored. | `string` | n/a | yes |
 
 ## Outputs ##
 
