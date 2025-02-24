@@ -9,7 +9,7 @@ data "terraform_remote_state" "images" {
 
   config = {
     encrypt        = true
-    bucket         = "cisa-cool-terraform-state"
+    bucket         = var.terraform_state_bucket
     dynamodb_table = "terraform-state-lock"
     profile        = "cool-terraform-backend"
     region         = "us-east-1"
@@ -24,12 +24,12 @@ data "terraform_remote_state" "master" {
 
   config = {
     encrypt        = true
-    bucket         = "cisa-cool-terraform-state"
+    bucket         = var.terraform_state_bucket
     dynamodb_table = "terraform-state-lock"
     profile        = "cool-terraform-backend"
     region         = "us-east-1"
     key            = "cool-accounts/master.tfstate"
   }
 
-  workspace = "production"
+  workspace = terraform.workspace
 }
