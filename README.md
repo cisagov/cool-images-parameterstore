@@ -21,15 +21,15 @@ access in the COOL Images account.
 | Name | Version |
 |------|---------|
 | terraform | ~> 1.1 |
-| aws | ~> 4.9 |
+| aws | ~> 6.7 |
 
 ## Providers ##
 
 | Name | Version |
 |------|---------|
-| aws | ~> 4.9 |
-| aws.imagesprovisionaccount | ~> 4.9 |
-| aws.organizationsreadonly | ~> 4.9 |
+| aws | ~> 6.7 |
+| aws.imagesprovisionaccount | ~> 6.7 |
+| aws.organizationsreadonly | ~> 6.7 |
 | terraform | n/a |
 
 ## Modules ##
