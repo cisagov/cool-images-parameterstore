@@ -1,6 +1,8 @@
 # cool-images-parameterstore #
 
 [![GitHub Build Status](https://github.com/cisagov/cool-images-parameterstore/workflows/build/badge.svg)](https://github.com/cisagov/cool-images-parameterstore/actions)
+[![License](https://img.shields.io/github/license/cisagov/cool-images-parameterstore)](https://spdx.org/licenses/)
+[![CodeQL](https://github.com/cisagov/cool-images-parameterstore/workflows/CodeQL/badge.svg)](https://github.com/cisagov/cool-images-parameterstore/actions/workflows/codeql-analysis.yml)
 
 Terraform code to create some roles related to SSM Parameter Store
 access in the COOL Images account.
