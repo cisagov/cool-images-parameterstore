@@ -21,14 +21,14 @@ access in the COOL Images account.
 ## Requirements ##
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | terraform | ~> 1.1 |
 | aws | ~> 6.7 |
 
 ## Providers ##
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | aws | ~> 6.7 |
 | aws.imagesprovisionaccount | ~> 6.7 |
 | aws.organizationsreadonly | ~> 6.7 |
@@ -41,7 +41,7 @@ No modules.
 ## Resources ##
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_iam_policy.parameterstorefullaccess_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
 | [aws_iam_policy.parameterstorereadonly_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
 | [aws_iam_policy.provisionparameterstorereadroles_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
@@ -64,7 +64,7 @@ No modules.
 ## Inputs ##
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | aws\_region | The AWS region where the non-global resources are to be provisioned (e.g. "us-east-1"). | `string` | `"us-east-1"` | no |
 | parameterstorefullaccess\_role\_description | The description to associate with the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | `string` | `"Allows full access to SSM ParameterStore."` | no |
 | parameterstorefullaccess\_role\_name | The name to assign the IAM role (as well as the corresponding policy) that allows full access to SSM ParameterStore. | `string` | `"ParameterStoreFullAccess"` | no |
@@ -78,7 +78,7 @@ No modules.
 ## Outputs ##
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | parameterstorefullaccess\_role | The IAM role that allows full access to SSM ParameterStore in the Images account. |
 | parameterstorereadonly\_role | The IAM role that allows read-only access to SSM ParameterStore in the Images account. |
 | provisionparameterstorereadroles\_role | The IAM role with the ability to create IAM roles that can read selected ParameterStore parameters in the Images account. |
